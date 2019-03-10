@@ -4,7 +4,7 @@ services:
     image: mariadb:latest
     restart: always
     env_file: .env
-    # command: --default-storage-engine=MyISAM
+    command: --default-storage-engine=MyISAM
     volumes:
       - db:/var/lib/mysql
     networks:
@@ -19,6 +19,7 @@ services:
       - 9001:9001
     environment:
       - MYSQL_TCP_ADDR=db
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
     env_file: .env
     security_opt:
       - no-new-privileges:true
