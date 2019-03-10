@@ -1,0 +1,93 @@
+{
+  "favicon": "favicon.ico",
+  "skinName": "colibris",
+  "ip": "0.0.0.0",
+  "showSettingsInAdminPage" : true,
+  "defaultPadText" : "Welcome to Etherpad, powered by DevClub IITD\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\n",
+
+  /*
+   * Default Pad behavior.
+   */
+  "padOptions": {
+    "noColors": false,
+    "showControls": true,
+    "showChat": true,
+    "showLineNumbers": true,
+    "useMonospaceFont": false,
+    "userName": false,
+    "userColor": false,
+    "rtl": false,
+    "alwaysShowChat": false,
+    "chatAndUsers": false,
+    "lang": "en-gb"
+  },
+
+  /*
+   * Pad Shortcut Keys
+   */
+  "padShortcutEnabled" : {
+    "altF9"     : true, /* focus on the File Menu and/or editbar */
+    "altC"      : true, /* focus on the Chat window */
+    "cmdShift2" : true, /* shows a gritter popup showing a line author */
+    "delete"    : true,
+    "return"    : true,
+    "esc"       : true, /* in mozilla versions 14-19 avoid reconnecting pad */
+    "cmdS"      : true, /* save a revision */
+    "tab"       : true, /* indent */
+    "cmdZ"      : true, /* undo/redo */
+    "cmdY"      : true, /* redo */
+    "cmdI"      : true, /* italic */
+    "cmdB"      : true, /* bold */
+    "cmdU"      : true, /* underline */
+    "cmd5"      : true, /* strike through */
+    "cmdShiftL" : true, /* unordered list */
+    "cmdShiftN" : true, /* ordered list */
+    "cmdShift1" : true, /* ordered list */
+    "cmdShiftC" : true, /* clear authorship */
+    "cmdH"      : true, /* backspace */
+    "ctrlHome"  : true, /* scroll to top of pad */
+    "pageUp"    : true,
+    "pageDown"  : true
+  },
+
+  /*
+   * Should we suppress errors from being visible in the default Pad Text?
+   */
+  "suppressErrorsInPadText" : false,
+
+  "requireSession" : false,
+  "editOnly" : false,
+  "sessionNoPassword" : false,
+  "minify" : true,
+  "maxAge" : 21600, // 60 * 60 * 6 = 6 hours
+  "abiword" : null,
+  "soffice" : null,
+  "tidyHtml" : null,
+  "allowUnknownFileEnds" : true,
+  "requireAuthentication" : false,
+  "requireAuthorization" : false,
+
+  /*
+   * When you use NGINX or another proxy/load-balancer set this to true.
+   */
+  "trustProxy" : true,
+
+  "disableIPlogging" : false,
+  "automaticReconnectionTimeout" : 0,
+  "socketTransportProtocols" : ["xhr-polling", "jsonp-polling", "htmlfile"],
+  "loadTest": false,
+
+  "indentationOnNewLine": true,
+  "loglevel": "INFO",
+
+  "logconfig" :
+    { "appenders": [{ "type": "console"}
+      ]
+    },
+
+  "ep_page_view_default": true,
+
+  // Need to add dbconfig and user data from docker entrypoint
+  
+
+

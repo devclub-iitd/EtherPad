@@ -1,0 +1,43 @@
+version: '3'
+services:
+  db:
+    image: mariadb:latest
+    restart: always
+    env_file: .env
+    # command: --default-storage-engine=MyISAM
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - "internal"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "${REGISTRY_NAME}devclubiitd/etherpad:0.1"
+    restart: always
+    ports:
+      - 9001:9001
+    environment:
+      - MYSQL_TCP_ADDR=db
+    env_file: .env
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9001"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - "reverseproxy"
+      - "internal"
+    depends_on:
+      - db
+
+volumes:
+  db:
+
+networks:
+  reverseproxy:
+    external:
+      name: "reverseproxy"
+  internal:
