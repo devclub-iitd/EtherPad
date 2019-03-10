@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: "${REGISTRY_NAME}mariadb:latest"
+    image: "${REGISTRY_NAME}mariadb:10.0"
     restart: always
     env_file: .env
     command: --default-storage-engine=MyISAM
