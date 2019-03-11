@@ -86,6 +86,24 @@
     },
 
   "ep_page_view_default": true,
+    "toolbar": {
+    "left": [
+      ["bold", "italic", "underline", "strikethrough"],
+      ["orderedlist", "unorderedlist", "indent", "outdent"],
+      ["undo", "redo"],
+      ["clearauthorship"]
+    ],
+    "right": [
+      // ["importexport", "timeslider", "savedrevision"],
+      ["importexport"],
+      ["settings", "embed"],
+      ["showusers"]
+    ],
+    "timeslider": [
+      ["timeslider_export", "timeslider_returnToPad"]
+    ]
+   },
+
 
   // Need to add dbconfig and user data from docker entrypoint
   
