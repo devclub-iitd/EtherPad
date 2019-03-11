@@ -1,13 +1,5 @@
-# Etherpad Lite Dockerfile
-#
-# https://github.com/ether/etherpad-docker
-#
-# Author: muxator
-#
-# Version 0.1
-
 FROM node:latest
-LABEL maintainer="Etherpad team, https://github.com/ether/etherpad-lite"
+LABEL maintainer="DevClub team, https://github.com/devclub-iitd/EtherPad"
 
 ENV NODE_ENV production
 
@@ -47,7 +39,7 @@ WORKDIR /opt/etherpad-lite
 RUN rm settings.json
 
 
-RUN npm install ep_adminpads ep_align ep_author_neat ep_brightcolorpicker ep_comments_page ep_font_color ep_headings2 ep_pads_stats ep_prompt_for_name ep_spellcheck ep_googleanalytics ep_post_data ep_ether-o-meter
+RUN npm install ep_align ep_author_neat ep_brightcolorpicker ep_comments_page ep_font_color ep_headings2 ep_pads_stats ep_prompt_for_name ep_spellcheck ep_googleanalytics ep_post_data ep_ether-o-meter
 
 COPY settings.template .
 COPY entrypoint.sh /entrypoint.sh
