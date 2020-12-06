@@ -13,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: "${REGISTRY_NAME}devclubiitd/etherpad:0.1"
+    image: "${REGISTRY_NAME}devclubiitd/etherpad:1.0"
     restart: always
     ports:
       - 9001:9001
