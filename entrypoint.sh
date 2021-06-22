@@ -68,8 +68,7 @@ if [ ! -f settings.json ]; then
 			    "password": "${ETHERPAD_DB_PASSWORD}",
 			    "database": "${ETHERPAD_DB_NAME}",
 				"charset" : "utf8mb4"
-			  },
-		"ep_googleanalytics":{"gaCode":"${GA_TRACKING_ID}"},	
+			  },	
 	EOF
 
 	if [ $ETHERPAD_ADMIN_PASSWORD ]; then

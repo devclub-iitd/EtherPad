@@ -1,6 +1,7 @@
 {
   "favicon": "favicon.ico",
   "skinName": "colibris",
+  "skinVariants": "dark-toolbar super-dark-background light-editor",
   "ip": "0.0.0.0",
   "showSettingsInAdminPage" : true,
   "defaultPadText" : "Welcome to Etherpad, powered by DevClub IITD\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\n",
